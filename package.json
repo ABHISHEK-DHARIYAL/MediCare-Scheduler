@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "cd backend && tsx server.ts",
-    "build": "npm run build:backend && npm run build:frontend",
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && npx tsc && g++ -O3 scheduler.cpp -o scheduler || echo 'skip cpp'",
     "build:frontend": "cd frontend && npm run build",
     "build:backend": "cd backend && (g++ -O3 scheduler.cpp -o scheduler || echo 'g++ not found, skipping C++ compilation')",
     "start": "cd backend && node dist/server.js",
