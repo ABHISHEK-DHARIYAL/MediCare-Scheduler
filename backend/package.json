@@ -5,8 +5,8 @@
   "main": "server.ts",
   "type": "module",
   "scripts": {
-    "build": "npx tsc && cd ../frontend && npm install && npm run build && g++ -O3 scheduler.cpp -o scheduler || echo 'g++ not found, skipping C++ compilation'",
-    "start": "node dist/server.js",
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && npx tsc && g++ -O3 scheduler.cpp -o scheduler || echo 'skip cpp'",
+    "start": "cd backend && node dist/server.js" ,
     "dev": "tsx server.ts"
   },
   "dependencies": {
