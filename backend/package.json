@@ -1,0 +1,24 @@
+{
+  "name": "medicare-backend",
+  "version": "1.0.0",
+  "description": "Backend for MediCare Scheduler",
+  "main": "server.ts",
+  "type": "module",
+  "scripts": {
+    "build": "g++ -O3 scheduler.cpp -o scheduler || echo 'g++ not found, skipping C++ compilation'",
+    "dev": "tsx server.ts",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "vite": "^8.0.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2"
+  }
+}
