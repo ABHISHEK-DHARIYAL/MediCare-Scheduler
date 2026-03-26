@@ -5,9 +5,9 @@
   "main": "server.ts",
   "type": "module",
   "scripts": {
-    "build": "g++ -O3 scheduler.cpp -o scheduler || echo 'g++ not found, skipping C++ compilation'",
-    "dev": "tsx server.ts",
-    "start": "node dist/server.js"
+    "build": "npx tsc && cd ../frontend && npm install && npm run build && g++ -O3 scheduler.cpp -o scheduler || echo 'g++ not found, skipping C++ compilation'",
+    "start": "node dist/server.js",
+    "dev": "tsx server.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
