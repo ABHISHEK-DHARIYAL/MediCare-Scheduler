@@ -4,6 +4,9 @@ A full-stack **Hospital Patient Scheduling Simulator** that demonstrates classic
 
 ---
 
+## Live Website is on 
+https://medi-care-scheduler.vercel.app/
+
 ## 📌 Features
 
 - 🏥 Patient Intake & Triage System
